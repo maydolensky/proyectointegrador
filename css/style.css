@@ -54,10 +54,25 @@ article img{
     height: 260px;
 }
 
-h1, h2, p {
+h1, h2, p, h3 {
     color: aliceblue;
 }
 
+.seriegrande {
+    display: flex;
+}
+
+.series_romcom img{
+    width: 350px;
+    height: auto;
+}
+
+
+
+.infoseriegrande{
+    text-align: left;
+    margin-left: 2%;
+}
 
 .pelispopulares{
     display: flex;
