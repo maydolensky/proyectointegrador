@@ -59,6 +59,7 @@ h1{
     color: aliceblue;
 }
 
+
 .pelispopulares{
     display: flex;
     flex-wrap: wrap;
@@ -79,6 +80,7 @@ h1{
 .infopeli{
     text-align: center;
 }
+<<<<<<< HEAD
 
 .valoradas{
     margin: 10px;
@@ -97,3 +99,5 @@ h1{
 .infoseries{
     text-align: center;
 }
+=======
+>>>>>>> 90115abb1ebe93b01dac8546deee1713f50feae3
