@@ -34,8 +34,8 @@ a{
 
 .barrainicio{
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-wrap: nowrap;
+   
     margin-right: 10%;
 }
 
@@ -51,3 +51,10 @@ a{
     align-items: center;
 }
 
+article img{
+    height: 150px;
+}
+
+h1{
+    color: aliceblue;
+}
