@@ -54,7 +54,7 @@ article img{
     height: 260px;
 }
 
-h1{
+h1, h2, p {
     color: aliceblue;
 }
 
