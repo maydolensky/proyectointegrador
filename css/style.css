@@ -59,6 +59,7 @@ h1{
     color: aliceblue;
 }
 
+
 .pelispopulares{
     display: flex;
     flex-wrap: wrap;
