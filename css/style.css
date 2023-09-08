@@ -79,3 +79,22 @@ h1{
 .infopeli{
     text-align: center;
 }
+
+
+.valoradas{
+    margin: 10px;
+    display: inline-block;
+}
+
+.infopelivalo{
+    text-align: center;
+}
+
+.seriesv{
+    margin: 10px;
+    display: inline-block;
+}
+
+.infoseries{
+    text-align: center;
+}
