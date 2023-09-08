@@ -34,9 +34,8 @@ a{
 
 .barrainicio{
     display: flex;
-    flex-wrap: nowrap;
-   
-    margin-right: 10%;
+    flex-wrap: wrap;
+    margin: 10%;
 }
 
 .contenedor_barra{
