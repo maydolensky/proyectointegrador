@@ -33,9 +33,13 @@ a{
 }
 
 .barrainicio{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.barrainicio li{
+    margin-left: 50px;
 }
 
 .contenedor_barra{
@@ -43,6 +47,7 @@ a{
     margin: 0%;
     padding: 0%;
     list-style: none;
+    
 }
 
 .buscador{
@@ -105,4 +110,14 @@ h1, h2, p, h3 {
 .seriesv{
     margin: 10px;
     display: inline-block;
+}
+
+
+@media (max-width:480px){
+
+    .barrainicio{
+       flex-direction: column;
+    }
+
+
 }
