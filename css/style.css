@@ -7,8 +7,9 @@ body {
     margin: 0%;
     padding: 0%;
     background-color: black;
+    font-family:'Bebas Neue', sans-serif;
+    margin: 10px;
 }
-
 header{
    display: flex;
    justify-content: space-between;
