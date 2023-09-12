@@ -64,11 +64,11 @@ h1, h2, p, h3 {
     color: aliceblue;
 }
 
-.seriegrande {
+.fotogrande {
     display: flex;
 }
 
-.series_romcom_sola img{
+.imagenes_sola img{
     width: 350px;
     height: auto;
 }
@@ -87,6 +87,10 @@ h1, h2, p, h3 {
     display: inline;
 }
 
+.populares{
+    margin: 10px;
+    display: inline-block;
+}
 
 .titulos{
     display: flex;
@@ -97,6 +101,11 @@ h1, h2, p, h3 {
     text-align: center;
 }
 
+
+.valoradas{
+    margin: 10px;
+    display: inline-block;
+}
 
 
 .seriesv{
