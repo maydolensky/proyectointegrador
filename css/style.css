@@ -23,6 +23,7 @@ ul, ol {
     margin-right: 10px;
     
 }
+
 a{
     text-decoration:none;
     color: rgb(255, 255, 255);
@@ -117,6 +118,10 @@ h1, h2, p, h3 {
     display: none;
 }
 
+footer{
+    margin-top: 100px;
+}
+
 @media (max-width:420px){
  /*  PELICULAS_DETALLES    */
     .barrainicio{
@@ -150,7 +155,7 @@ h1, h2, p, h3 {
         padding: 0%;
         list-style: none;
         order:1;
-        mar
+        
 
     }
 
@@ -159,22 +164,21 @@ h1, h2, p, h3 {
         order: 2;
     }
 
-    .imagenes_2 img{
-        display: none;
+    
 
-
-    }
-
-    .imagen_footer{
+    .imagen_footer {
         height: 80px;
         max-width: 100vw;
+        max-height: 90vw;
         display: block ;
        
     }
 
     footer{
-        width: 100vw;
+       max-width: 100vw;
     }
+
+    
 
 
 
