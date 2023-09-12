@@ -113,12 +113,70 @@ h1, h2, p, h3 {
     display: inline-block;
 }
 
+.imagen_footer{
+    display: none;
+}
 
-@media (max-width:480px){
-
+@media (max-width:420px){
+ /*  PELICULAS_DETALLES    */
     .barrainicio{
        flex-direction: column;
+       margin-right: 200px;
     }
+
+    .imagenes_sola img{
+        width: 150px;
+        height: auto;
+        margin-left: 2%;
+    }
+
+    .fotogrande {
+        display: flex;
+    }
+
+    .infoseriegrande{
+        text-align:justify;
+        margin-left: 2%;
+        
+    }
+
+    .buscador{
+        display: none;
+    }
+
+    .contenedor_barra{
+        display: flex;
+        margin-right: 20px;
+        padding: 0%;
+        list-style: none;
+        order:1;
+        mar
+
+    }
+
+    .imagenes_1 img {
+        height: 80px;
+        order: 2;
+    }
+
+    .imagenes_2 img{
+        display: none;
+
+
+    }
+
+    .imagen_footer{
+        height: 80px;
+        max-width: 100vw;
+        display: block ;
+       
+    }
+
+    footer{
+        width: 100%;
+    }
+
+
 
 
 }
