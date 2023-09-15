@@ -4,20 +4,6 @@
     padding: 0;
     
 }
-
-body {
-    
-    background-color: black;
-    font-family:'Bebas Neue', sans-serif;
-    margin: 10px;
-}
-header{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   padding: 10px;
-}
-
 ul, ol {
     list-style: none;
     padding: 0px;
@@ -30,7 +16,23 @@ a{
     color: rgb(255, 255, 255);
 }
 
+h1, h2, p, h3 {
+    color: aliceblue;
+}
 
+body {
+    
+    background-color: black;
+    font-family:'Bebas Neue', sans-serif;
+    margin: 10px;
+}
+
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px;
+}
 .imagenes img{
     height: 120px;
 }
@@ -70,9 +72,6 @@ article img{
     height: 260px;
 }
 
-h1, h2, p, h3 {
-    color: aliceblue;
-}
 
 .fotogrande {
     display: flex;
@@ -123,12 +122,13 @@ h1, h2, p, h3 {
     display: inline-block;
 }
 
-.imagen_footer{
-    display: none;
-}
-
 footer{
     margin-top: 100px;
+}
+
+
+.imagen_footer{
+    display: none;
 }
 
 @media (max-width:420px){
@@ -137,6 +137,16 @@ footer{
  header{
     flex-direction: column;
  }
+
+ .barrainicio{
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    text-align: justify;
+    
+    
+}
+
 .pelispopulares{
     justify-content:center;
  }
@@ -146,11 +156,7 @@ footer{
     height: auto;
     margin-left: 2%;
 }
-.barrainicio{
-    flex-direction: column;
-    text-align: justify;
-    
-}
+
 
 .fotogrande {
     display: flex;
@@ -160,10 +166,6 @@ footer{
     text-align:justify;
     margin-left: 2%;
     
-}
-
-.buscador{
-    display: none;
 }
 
 .contenedor_barra{
@@ -183,8 +185,14 @@ footer{
 
 
 
+.imagenes_sola img{
+    width: 190px;
+    height: auto;
+}
+
+
 .imagen_footer img{
-    width: 100%;
+    width: 95%;
     
     
     
@@ -193,11 +201,6 @@ footer{
 .imagen_footer {
     width: 100vw;
     display: block;
-}
-
-.imagenes_sola img{
-    width: 190px;
-    height: auto;
 }
 
 
