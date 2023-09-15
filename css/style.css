@@ -57,6 +57,14 @@ a{
     align-items: center;
 }
 
+.imagenes_buscador{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    display: inline;
+    
+}
+
 article img{
     height: 260px;
 }
