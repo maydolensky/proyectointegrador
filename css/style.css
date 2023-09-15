@@ -57,6 +57,14 @@ a{
     align-items: center;
 }
 
+.imagenes_buscador{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    display: inline;
+    
+}
+
 article img{
     height: 260px;
 }
@@ -124,9 +132,16 @@ footer{
 
 @media (max-width:420px){
  /*  PELICULAS_DETALLES    */
+
+ header{
+    flex-direction: column;
+ }
+.pelispopulares{
+    justify-content:center ;
+ }
     .barrainicio{
        flex-direction: column;
-       margin-right: 200px;
+       
     }
 
     .imagenes_sola img{
@@ -166,17 +181,16 @@ footer{
 
     
 
-    .imagen_footer {
-        height: 80px;
-        max-width: 100vw;
-        max-height: 90vw;
-        display: block ;
+    .imagen_footer img{
+        width: 100%;
+        
         
        
     }
 
-    footer{
-       max-width: 100vw;
+    .imagen_footer {
+       width: 100vw;
+       display: block;
     }
 
     
