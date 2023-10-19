@@ -61,11 +61,7 @@ header{
 }
 
 .imagenes_buscador{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     display: inline;
-    
 }
 
 article img{
@@ -90,9 +86,6 @@ article img{
 }
 
 .pelispopulares{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     display: inline;
 }
 
