@@ -124,6 +124,10 @@ footer{
     display: none;
 }
 
+.imagen2_footer img{
+    height: 120px;
+}
+
 @media (max-width:420px){
  /*  PELICULAS_DETALLES    */
 
