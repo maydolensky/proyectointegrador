@@ -31,7 +31,6 @@
         <form class="buscador" action="buscador.html" method="get"  >
             <label for="busqueda"></label>
             <input type="text" id="busqueda" name="búsqueda" placeholder="Escribe aquí">
-            <button type="button">Buscar</button>
         </form>
 
         <div class="imagenes">
@@ -41,8 +40,9 @@
     </header>
 <!--Comienza el buscador-->
     <h1>Resultados de Búsqueda</h1>
-    <h2>Buscaste: The </h2>
-    <ul>
+    <main class="cuerpo">
+    <h2>Buscaste:</h2>
+    <ul class="contenedor_resultados">
         <li class="imagenes_buscador">
             <article class="seriesv 1">
                 <a href="series_detalles.html"> <img src="./img/thesummeriturnedpretty.jpg" alt="The Summer I Turned Pretty"> </a>
@@ -52,26 +52,9 @@
                 </div>
             </article>
         </li>
-
-        <li class="imagenes_buscador">
-            <article class="populares 2">
-                <a href="peliculas_detalles.html"> <img src="./img/theproposal.jpg" alt="the proposal"> </a>
-                <div class="infopeli"><a href="./peliculas_detalles.html">The Proposal</a> <br>
-                    <a href="./peliculas_detalles.html">
-                </div>
-            </article> 
-        </li>
-         
-         <li class="imagenes_buscador">
-            <article class="populares 5">
-                <a href="peliculas_detalles.html"> <img src="./img/thedecilwearsprada.jpg" alt="the deavil wears prada"> </a>
-                <div class="infopeli">
-                    <a href="./peliculas_detalles.html">The Devil Wears Prada</a> <br>
-                    <a href="./peliculas_detalles.html">
-                </div>
-            </article>
-        </li>
     </ul>
+    <h2>No hay resultados para tu búsqueda</h2>
+    </main>
 
     <footer>
         <h2>Moon Watch</h2>
@@ -80,5 +63,12 @@
             <img src="./img/logoproyecto.png" alt="moon watch logo">
         </div>
     </footer>
+    <script src="./js/index.js"></script>
+    <script src="./js/buscador.js"></script>
+    <script src="./js/favoritos.js"></script>
+    <script src="./js/formulario.js"></script>
+    <script src="./js/genero_detalles.js"></script>
+    <script src="./js/peliculas_detalles.js"></script>
+    <script src="./js/series_detalles.js"></script>
 </body>
 </html>
