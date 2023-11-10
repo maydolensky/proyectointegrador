@@ -99,8 +99,15 @@ article img{
     flex-wrap: wrap;
 }
 
-.infopeli{
-    text-align: center;
+.infopelis{
+    max-width: 200px; 
+    margin: 0 auto; 
+    text-align: center; 
+    height: 370px; /* Altura fija para todos los contenedores */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 
@@ -126,6 +133,14 @@ footer{
 
 .imagen2_footer img{
     height: 120px;
+}
+
+h3 {
+    margin-top: 10px; /* Espacio entre título y imagen */
+}
+
+.release-date {
+    margin-top: 5px; /* Espacio entre fecha de estreno y título */
 }
 
 @media (max-width:420px){
