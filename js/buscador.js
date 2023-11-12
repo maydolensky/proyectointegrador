@@ -52,4 +52,3 @@ fetch(URL_Buscador)
     .catch(function(error){
         console.error("Error al realizar la búsqueda:", error);
     })
-}
