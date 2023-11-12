@@ -30,7 +30,7 @@
 
         <form class="buscador" action="buscador.html" method="get"  >
             <label for="busqueda"></label>
-            <input type="text" id="busqueda" name="búsqueda" placeholder="Escribe aquí">
+            <input type="text" id="busqueda" name="búsqueda" placeholder="Escribe aquí"> <!--el id es lo que necesitamos para llamarlo en js y aparezca en el título-->
         </form>
 
         <div class="imagenes">
@@ -41,18 +41,21 @@
 <!--Comienza el buscador-->
     <h1>Resultados de Búsqueda</h1>
     <main class="cuerpo">
-    <h2>Buscaste:</h2>
-    <ul class="contenedor_resultados">
+    <h2 class="rta_buscador">Buscaste:</h2>
+
+    <ul class="contenedor_resultados"> <!-- a partir de acá se modifica cuando se busca algo-->
         <li class="imagenes_buscador">
             <article class="seriesv 1">
                 <a href="series_detalles.html"> <img src="./img/thesummeriturnedpretty.jpg" alt="The Summer I Turned Pretty"> </a>
-                <div class="infopeli">
+                <div class="infopeli"> <!-- esto por cada busqueda-->
                     <a href="./series_detalles.html">The Summer I Turned Pretty</a> <br>
                     <a href="./series_detalles.html">
                 </div>
             </article>
         </li>
     </ul>
+
+
     <h2>No hay resultados para tu búsqueda</h2>
     </main>
 

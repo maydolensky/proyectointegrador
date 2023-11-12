@@ -1,4 +1,4 @@
-let APIKey = "api_key=7bd62b07c70beb54f8320746a7049a45"; 
+let APIKey= "api_key=7bd62b07c70beb54f8320746a7049a45"; 
 let baseURL = "https://api.themoviedb.org/3/"; 
 let IMG_URL = "https://image.tmdb.org/t/p/w500";
 
