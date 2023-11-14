@@ -143,6 +143,36 @@ h3 {
     margin-top: 5px; /* Espacio entre fecha de estreno y título */
 }
 
+.title{
+    text-align: center;
+}
+
+.contengo_generos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+.bloque_de_generos {
+    margin: 0;
+    padding: 0;
+  }
+  
+.contenedor_genres {
+    list-style-type: none;
+    padding: 0;
+  }
+
+.genero {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: rgb(37, 140, 249);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+
 @media (max-width:420px){
  /*  PELICULAS_DETALLES    */
 
