@@ -10,3 +10,27 @@ fetch (URL_detallepeli)
         console.log(arrayDetallesPeli); 
         let listaMovies= document.querySelector(".contenedor_peliculas");
         let peliculas=""
+        peliculas += `
+        <div class="contenedor_peliculas"> 
+
+            <section class="imagenes_sola">
+                <a href="URL_detallepeli?id=${listaMovies[i].id}"><h2>Genero</h2></a>
+                    <article class="fotogrande">
+                        <img src="${IMG_URL}${listaMovies[i].poster_path}" alt="${listaMovies[i].title}">
+                        <div class="infoseriegrande">
+                            <a href=""><h2>Titulo</h2></a> <br>
+                            <a href="URL_detallepeli?id=${listaMovies[i].id}">${listaMovies[i].release_date}">Estreno</a>
+                            <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
+                            <p class="data_peli">
+                                <a href="URL_detallepeli?id=${listaMovies[i].id}">${listaMovies[i].overview}</a>
+                            </p>
+                            <p class="Duración">
+                                //NO ENCONTRE EL DE DURACION
+                            </p>
+                            <p class="Rating">
+                                <a href="URL_detallepeli?id=${listaMovies[i].id}">${listaMovies[i].vote_average}</a>
+                            </p>
+                        </div>
+                    </article>
+            </section>
+        </div>   ` ;})
