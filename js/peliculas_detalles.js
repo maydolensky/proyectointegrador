@@ -34,3 +34,6 @@ fetch (URL_detallepeli)
                     </article>
             </section>
         </div>   ` ;})
+        .catch(function(error){
+            console.log( "Error: " + error);
+        })
