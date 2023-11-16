@@ -1,7 +1,9 @@
 
-let MyAPIKey = "api_key=7bd62b07c70beb54f8320746a7049a45"; 
 let baseURL = "https://api.themoviedb.org/3/"; 
-let IMG_URL = "https://image.tmdb.org/t/p/w500";
+let queryString = location.search
+let queryStringObj = new URLSearchParams(queryString);
+let busqueda = queryStringObj.get("busqueda"); //agarra el input
+
 let URL_Buscador = baseURL + "search/movie?" + MyAPIKey;
 
 
@@ -9,31 +11,42 @@ let URL_Buscador = baseURL + "search/movie?" + MyAPIKey;
  let tituloResultado = document.querySelector("h2");
  let listaMovies = document.querySelector(".contenedor_resultados"); // TODA LA UL, TENDR´A LA INFO DE LAS PELIS
  let listaSeries = document.querySelector(".contenedor_resultados"); // TODA LA UL, TENDR´A LA INFO DE LAS PELIS
- let searchTerm= document.getElementById('searchTerm')  //agarra el h2 que aparece diciendo 'buscaste'
-//CODIGO DE MIGUEL
-let queryString = location.search
-let queryStringObj = new URLSearchParams(queryString)
-let busqueda = queryStringObj.get("busqueda") //agarra el input
-console.log( busqueda)
-//  
+ let searchTerm= document.getElementById('searchTerm')  //agarra el h2 que aparece diciendo 'buscaste' 
 
 
 
 fetch(URL_Buscador + '&query=' + busqueda) // es como dice la página que hay que hacer el url para buscar lo q pide el user
     .then(function(response) {
-        console.log(response)})
-    .then(function(data) {
-        searchTerm.textContent = busqueda;
-        console.log('Respuesta:', data); // Response de la API en base al search
-        console.log(`Encontraste algo en el HTML ===: ${searchTerm.textContent}`);
-        console.log("Buscaste: " + busqueda);
-        
-
-        })
-    .catch(function(error){
-        console.log(err)
+        return response.json()
     })
+    .then(function(data) {
+        let movies = data.results;
+        let contenido = "";
+            for (let i; i < movies.length; i++) {
+                let movies = data.results[i]
+                if (pelicula.backdrop_path[i] === null){
+                    console.log(i)
+                }
+                else {
+                    let IMG_URL = `https://image.tmdb.org/t/p/w500/${movie.poster_path}`;
+                    contenido += `<ul class="contenedor_resultados">
+                    <li class="imagenes_buscador">
+                        <article class="seriesv 1">
+                            <a href= "./peliculas_detalles.html=${pelicula.id}">
+                            <img src="${poster}" alt="img"> </a>
+                            <p>${movies.original_title}</p>
+                        </article>
+                    </li>
+                </ul>`
+                }
 
+            }
+//<div class="infopeli"> LO MISMO QUE ARRIBA PERO PARA SERIES
+//<a href="./series_detalles.html">The Summer I Turned Pretty</a> <br>
+//<a href="./series_detalles.html">
+//</div>
+
+let resultadoBusqueda =
     //                    
 
 
