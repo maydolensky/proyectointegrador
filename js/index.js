@@ -6,6 +6,7 @@ let IMG_URL = "https://image.tmdb.org/t/p/w500";
 let API_URL_pelispopulares = baseURL + "movie/popular?" + APIKey;
 let API_URL_pelisvaloradas = baseURL + "movie/top_rated?" + APIKey;
 let API_URL_seriespopulares = baseURL + "tv/popular?" + APIKey;
+let listaMovies= document.querySelector("#main");
 
 fetch (API_URL_pelispopulares)
     .then(function(response){
@@ -31,6 +32,7 @@ fetch (API_URL_pelispopulares)
                         <p class="release-date">
                             <a href="peliculas_detalles.html?id=${arrayMovies[i].id}">${arrayMovies[i].release_date}</a>
                         </p>
+                        <button class="boton_favoritos">Favoritos</button>
                     </div>
                 </article>`;
         }
@@ -65,6 +67,7 @@ fetch (API_URL_pelispopulares)
                         <p class="release-date">
                             <a href="peliculas_detalles.html?id=${arrayMovies[i].id}">${arrayMovies[i].release_date}</a>
                         </p>
+                        <button class="boton_favoritos">Favoritos</button>
                     </div>
                 </article>`;
         }
@@ -98,11 +101,35 @@ fetch (API_URL_pelispopulares)
                         <p class="release-date">
                             <a href="series_detalles.html?id=${arraySeries[i].id}">${arraySeries[i].release_date}</a>
                         </p>
+                        <button class="boton_favoritos">Favoritos</button>
                     </div>
                 </article>`;
+
         }
         listaSeries.innerHTML = series;
     })
     .catch(function(error) {
         console.log("Error: " + error);
     });
+
+for (let i = 0; i < listaMovies.length; i ++) {
+    contendor_fav.innerHTML += `
+    <div>
+    ${listaMovies[i]}
+    <button class="boton_favoritos">Favoritos</button>
+    </div>`
+}
+
+let botonesFavs = document.querySelectorAll("boton_favoritos")
+for(let i = 0; i < botonesFavs.length; i ++) {
+    botonesFavs[i].addEventListener("click", function() {
+        if (botonesFavs[i].style.backgroundColor === "red") {
+            botonesFavs[i].style.backgroundColor === "white"
+            botonesFavs[i].innerHTML = "Favoritos"
+        }
+        else {
+            botonesFavs[i].style.backgroundColor === "red"
+            botonesFavs[i].innerHTML = "Eliminar de Favoritos"
+        }
+})
+}
