@@ -1,5 +1,6 @@
-let URL_detallepeli = https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=api_key=7bd62b07c70beb54f8320746a7049a45}
-console.log(URL_detallepeli)
+let URL_detallepeli = "https://api.themoviedb.org/3/movie/${id}?api_key=7bd62b07c70beb54f8320746a7049a45";
+console.log(URL_detallepeli);
+let IMG_URL = "https://image.tmdb.org/t/p/w500";
 
 fetch (URL_detallepeli)
     .then(function(response){

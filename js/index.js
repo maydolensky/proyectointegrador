@@ -93,13 +93,13 @@ fetch (API_URL_pelispopulares)
                 <article class="populares">
                     <div class="infopelis"> 
                         <a href="series_detalles.html?id=${arraySeries[i].id}">
-                            <img src="${IMG_URL}${arraySeries[i].poster_path}" alt="${arraySeries[i].title}">
+                            <img src="${IMG_URL}${arraySeries[i].poster_path}" alt="${arraySeries[i].name}">
                         </a>
                         <h3>
-                            <a href="series_detalles.html?id=${arraySeries[i].id}">${arraySeries[i].title}</a>
+                            <a href="series_detalles.html?id=${arraySeries[i].id}">${arraySeries[i].name}</a>
                         </h3>
                         <p class="release-date">
-                            <a href="series_detalles.html?id=${arraySeries[i].id}">${arraySeries[i].release_date}</a>
+                            <a href="series_detalles.html?id=${arraySeries[i].id}">${arraySeries[i].first_air_date}</a>
                         </p>
                         <button class="boton_favoritos">Favoritos</button>
                     </div>
