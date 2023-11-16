@@ -1,4 +1,9 @@
-let URL_detallepeli = `https://api.themoviedb.org/3/movie/${id}?api_key=7bd62b07c70beb54f8320746a7049a45`;
+let APIKey= "api_key=7bd62b07c70beb54f8320746a7049a45";
+let qs = location.search;
+let qsObj = new URLSearchParams(qs);
+let id_pelicula = qsObj.get("id");
+
+let URL_detallepeli = `https://api.themoviedb.org/3/movie/${id_pelicula}?api_key=7bd62b07c70beb54f8320746a7049a45`;
 let IMG_URL = "https://image.tmdb.org/t/p/w500";
 
 fetch (URL_detallepeli)
