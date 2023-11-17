@@ -15,10 +15,18 @@ fetch (URL_detallepeli)
         let arrayDetallesPeli= data;
         console.log(arrayDetallesPeli); 
         
+        let genreNames = "";
+        for (let i = 0; i < arrayDetallesPeli.genres.length; i++) {
+            genreNames += `<a href="./genero_detalles.html?id=${arrayDetallesPeli.genres[i].id}">${arrayDetallesPeli.genres[i].name}</a>`;
+            if (i < arrayDetallesPeli.genres.length - 1) {
+                genreNames += ', ';
+            }
+        }
+
         let peliculas=""
         peliculas += 
         `<section class="imagenes_sola">
-            <a href="${URL_detallepeli}"><h2>Genero</h2></a>
+            <h2>${genreNames}</h2>
             <article class="fotogrande">
                 <img src="${IMG_URL}${arrayDetallesPeli.poster_path}" alt="${arrayDetallesPeli.title}">
                 <div class="infopelisgrande">
