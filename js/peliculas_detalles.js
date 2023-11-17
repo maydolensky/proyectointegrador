@@ -11,37 +11,27 @@ fetch (URL_detallepeli)
         return response.json();
     })
     .then(function(data){
+        let listaMovies= document.querySelector(".contenedor_peliculas");
         let arrayDetallesPeli= data;
         console.log(arrayDetallesPeli); 
-        let listaMovies= document.querySelector(".contenedor_peliculas");
         
         let peliculas=""
-        peliculas += `
-        <div class="contenedor_peliculas"> 
-
-            <section class="imagenes_sola">
-                <a href="URL_detallepeli?id=${listaMovies.id}"><h2>Genero</h2></a>
-                    <article class="fotogrande">
-                        <img src="${IMG_URL}${listaMovies.poster_path}" alt="${listaMovies.title}">
-                        
-                        <div class="infoseriegrande">
-                            <a href=""><h2>Titulo</h2></a> <br>
-                            <a href="URL_detallepeli?id=${listaMovies.id}">${listaMovies.release_date}">Estreno</a>
-                            <i class="fa-solid fa-heart" style="color: #ffffff;"></i>
-                            <p class="data_peli">
-                                <a href="URL_detallepeli?id=${listaMovies.id}">${listaMovies.overview}</a>
-                            </p>
-                            <p class="Duración">
-                                //NO ENCONTRE EL DE DURACION
-                            </p>
-                            <p class="Rating">
-                                <a href="URL_detallepeli?id=${listaMovies.id}">${listaMovies.vote_average}</a>
-                            </p>
-                        </div>
-                    </article>
-            </section>
-        </div>   ` 
-        listaMovies.innerHTML+= peliculas //envia a lista movies lo que pusimos en peliculas
+        peliculas += 
+        `<section class="imagenes_sola">
+            <a href="${URL_detallepeli}"><h2>Genero</h2></a>
+            <article class="fotogrande">
+                <img src="${IMG_URL}${arrayDetallesPeli.poster_path}" alt="${arrayDetallesPeli.title}">
+                <div class="infopelisgrande">
+                    <a href=""><h2>${arrayDetallesPeli.title}</h2></a>
+                    <p class="detalle">Estreno: ${arrayDetallesPeli.release_date}</p>
+                    <p class="detalle">Sinopsis: ${arrayDetallesPeli.overview}</p>
+                    <p class="detalle">Duración: ${arrayDetallesPeli.runtime} min</p>
+                    <p class="detalle">Calificación: <span class="star">&#9733;</span> ${arrayDetallesPeli.vote_average}</p>
+                </div>
+            </article>
+        </section>`;
+            
+            listaMovies.innerHTML+= peliculas //envia a lista movies lo que pusimos en peliculas
         ;})
 
         .catch(function(error){
