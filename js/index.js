@@ -58,11 +58,11 @@ fetch (API_URL_pelispopulares)
             peliculas += `
                 <article class="populares">
                     <div class="infopelis"> 
-                        <a href="peliculas_detalle.html?id=${arrayMovies[i].id}">
+                        <a href="peliculas_detalles.html?id=${arrayMovies[i].id}">
                             <img src="${IMG_URL}${arrayMovies[i].poster_path}" alt="${arrayMovies[i].title}">
                         </a>
                         <h3>
-                            <a href="peliculas_detalle.html?id=${arrayMovies[i].id}">${arrayMovies[i].title}</a>
+                            <a href="peliculas_detalles.html?id=${arrayMovies[i].id}">${arrayMovies[i].title}</a>
                         </h3>
                         <p class="release-date">
                             <a href="peliculas_detalles.html?id=${arrayMovies[i].id}">${arrayMovies[i].release_date}</a>
