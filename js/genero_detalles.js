@@ -1,0 +1,1 @@
+URL_peliculas_discover = "https://api.themoviedb.org/3/discover/movie" //ni idea si esta bien
