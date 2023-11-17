@@ -186,6 +186,16 @@ h3 {
     font-size: 20px;
 }
 
+#verRecomendacionesBtn {
+    background-color: white; /* Fondo blanco */
+    color: black; /* Texto negro */
+    font-size: 16px; /* Tamaño de fuente */
+    padding: 10px 20px; /* Relleno del botón */
+    border: 2px solid black; /* Borde negro */
+    border-radius: 5px; /* Esquinas redondeadas */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  }
+
 @media (max-width:420px){
  /*  PELICULAS_DETALLES    */
 
