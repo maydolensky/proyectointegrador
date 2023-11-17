@@ -1,4 +1,9 @@
 let url_genres = "https://api.themoviedb.org/3/genre/movie/list?api_key=7bd62b07c70beb54f8320746a7049a45";
+let queryString = location.search
+let queryStringObj = new URLSearchParams(queryString);
+let busqueda = queryStringObj.get("busqueda"); //agarra el input //guarda el valor de mi clave
+let IMG_URL = "https://image.tmdb.org/t/p/w500";
+
 
 fetch(url_genres)
   .then(function(response) {
