@@ -146,7 +146,7 @@ h3 {
     text-align: center;
 }
 
-.contengo_generos {
+.contengo_generos, .contengo_generos_series {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
