@@ -46,3 +46,41 @@ fetch(URL_peliculas_discover)
     .catch(function(error) {
         console.log("Error: " + error);
     });
+
+fetch(URL_series_discover)
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(data) {
+        let arrayGenres = data.results;
+        let contenido = "";
+        console.log(arrayGenres);
+
+        if (arrayGenres.length === 0) {
+            // Puedes ajustar este mensaje según tus necesidades
+            console.log("Disculpa! No pudimos encontrar datos que coincidan con tu búsqueda");
+        } else {
+            for (let i = 0; i < 14; i++) {
+                contenido += `<article class="populares">
+                                <div class="infopelis"> 
+                                    <a href="./series_detalles.html?id=${arrayGenres[i].id}">
+                                        <img src="${IMG_URL}${arrayGenres[i].poster_path}" alt="${arrayGenres[i].name}">
+                                    </a>
+                                    <h3>
+                                        <a href="./series_detalles.html?id=${arrayGenres[i].id}">${arrayGenres[i].name}</a>
+                                    </h3>
+                                    <p class="release-date">
+                                        <a href="./series_detalles.html?id=${arrayGenres[i].id}">Release Date: ${arrayGenres[i].release_date}</a>
+                                    </p>
+                                </div>
+                            </article>`;
+            }
+
+            // Agregar el contenido al elemento con clase "series_romcom"
+            let seriesRomcomElement = document.querySelector(".series_romcom");
+            seriesRomcomElement.innerHTML = contenido;
+        }
+    })
+    .catch(function(error) {
+        console.log("Error: " + error);
+    });
