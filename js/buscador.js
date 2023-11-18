@@ -12,6 +12,9 @@ let URL_series = `https://api.themoviedb.org/3/search/tv?api_key=${MyAPIKey}&que
 //url peliculas y url para seires (with genres)
 //resultados de series = ver donde tenog que poner el texto
 
+let loader = document.getElementById("loader");
+loader.style.display = "block";
+
 
 fetch(URL_peliculas) // es como dice la página que hay que hacer el url para buscar lo q pide el user
     .then(function(response) {
@@ -42,7 +45,7 @@ fetch(URL_peliculas) // es como dice la página que hay que hacer el url para bu
         }}
 
         resultado_html.innerHTML = contenido;
-        //aca ponemos un if
+        loader.style.display = "none";
     })
     
     .catch(function(error) {
