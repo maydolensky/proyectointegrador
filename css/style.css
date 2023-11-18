@@ -88,7 +88,7 @@ article img{
     display: inline;
 }
 
-.populares{
+.populares, .seriesv{
     margin: 10px;
     display: inline-block;
 }
@@ -98,7 +98,7 @@ article img{
     flex-wrap: wrap;
 }
 
-.infopelis{
+.infopelis, .seriesv{
     max-width: 200px; 
     margin: 0 auto; 
     text-align: center; 
